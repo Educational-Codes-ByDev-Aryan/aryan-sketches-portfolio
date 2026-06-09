@@ -309,6 +309,45 @@ p {
     cursor: pointer;
 }
 
+/* other contact options */
+.contact-options {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.contact-options p {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+
+.contact-options a {
+    display: inline-block;
+    margin: 0.5rem;
+}
+
+/* whatsapp link */
+.whatsapp-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 24px;
+    background: #25D366;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+/* email link */
+.email-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 24px;
+    background: #333;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+}
 
 /* footer */
 .footer {
