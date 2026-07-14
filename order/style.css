@@ -1,0 +1,363 @@
+/* ===========================================
+   RN SKETCHES - Premium Order Form
+=========================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap');
+
+:root{
+    --gold:#b38728;
+    --gold-light:#f8f1dc;
+    --gold-gradient:linear-gradient(135deg,#bf953f,#fcf6ba,#aa771c);
+    --black:#111;
+    --white:#fff;
+    --gray:#666;
+    --border:#e5e5e5;
+    --shadow:0 15px 35px rgba(0,0,0,.08);
+    --transition:.35s ease;
+}
+
+/* Reset */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Inter',sans-serif;
+    background:#f8f8f8;
+    color:var(--black);
+    line-height:1.6;
+}
+
+/* Section */
+
+.order-section{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:60px 20px;
+    background:
+        radial-gradient(circle at top left,#fff7df 0%,transparent 35%),
+        radial-gradient(circle at bottom right,#fff8e7 0%,transparent 35%);
+}
+
+/* Card */
+
+.order-container{
+    width:100%;
+    max-width:760px;
+    background:rgba(255,255,255,.95);
+    backdrop-filter:blur(15px);
+    border:1px solid rgba(179,135,40,.25);
+    border-radius:20px;
+    padding:45px;
+    box-shadow:var(--shadow);
+    transition:var(--transition);
+}
+
+.order-container:hover{
+    transform:translateY(-6px);
+    box-shadow:0 25px 50px rgba(0,0,0,.12);
+}
+
+/* Heading */
+
+.section-heading{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.heading-tag{
+    color:var(--gold);
+    font-size:.8rem;
+    text-transform:uppercase;
+    letter-spacing:4px;
+}
+
+.order-title{
+    font-family:'Playfair Display',serif;
+    font-size:2.7rem;
+    margin:15px 0;
+}
+
+.order-title::after{
+    content:"";
+    display:block;
+    width:70px;
+    height:3px;
+    margin:18px auto;
+    background:var(--gold-gradient);
+    border-radius:20px;
+    transition:.4s;
+}
+
+.order-container:hover .order-title::after{
+    width:140px;
+}
+
+.order-subtitle{
+    color:var(--gray);
+    max-width:550px;
+    margin:auto;
+}
+
+/* Form */
+
+.form-row{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+}
+
+.form-group{
+    margin-bottom:22px;
+}
+
+.form-group label{
+    display:block;
+    margin-bottom:8px;
+    font-size:.85rem;
+    font-weight:600;
+    text-transform:uppercase;
+    letter-spacing:1px;
+}
+
+/* Inputs */
+
+.form-group input,
+.form-group select,
+.form-group textarea{
+
+    width:100%;
+    padding:15px 18px;
+    border:1px solid var(--border);
+    border-radius:12px;
+    font-size:.95rem;
+    background:#fff;
+    transition:var(--transition);
+    font-family:inherit;
+
+}
+
+.form-group input:hover,
+.form-group select:hover,
+.form-group textarea:hover{
+
+    border-color:var(--gold);
+
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus{
+
+    outline:none;
+    border-color:var(--gold);
+    box-shadow:0 0 0 4px rgba(179,135,40,.12);
+
+}
+
+textarea{
+    resize:vertical;
+    min-height:120px;
+}
+
+
+/*==========================================
+        Upload Area
+==========================================*/
+
+.upload-area{
+    border:2px dashed var(--gold);
+    border-radius:16px;
+    padding:40px 20px;
+    text-align:center;
+    background:var(--white);
+    cursor:pointer;
+    transition:var(--transition);
+}
+
+.upload-area:hover{
+    border-style:solid;
+    background:var(--gold-light);
+    transform:translateY(-4px);
+}
+
+.upload-icon{
+    font-size:2.5rem;
+    margin-bottom:12px;
+    transition:var(--transition);
+}
+
+.upload-area:hover .upload-icon{
+    transform:scale(1.1) rotate(8deg);
+}
+
+.upload-area h3{
+    font-size:1.1rem;
+    margin-bottom:8px;
+}
+
+.upload-area p{
+    color:var(--gray);
+    font-size:.9rem;
+}
+
+#photoInput{
+    display:none;
+}
+
+/*==========================================
+        Amount Panel
+==========================================*/
+
+.amount-panel{
+    margin:30px 0;
+    padding:20px 25px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:#fffdf7;
+    border-left:5px solid var(--gold);
+    border-radius:12px;
+    box-shadow:var(--shadow);
+}
+
+.amount-label{
+    color:var(--gray);
+    font-size:.9rem;
+    text-transform:uppercase;
+    letter-spacing:1px;
+}
+
+.amount-value{
+    font-family:'Playfair Display',serif;
+    font-size:2rem;
+    color:var(--gold);
+    font-weight:700;
+}
+
+/*==========================================
+        WhatsApp Button
+==========================================*/
+
+.whatsapp-btn{
+    width:100%;
+    padding:16px;
+    border:none;
+    border-radius:12px;
+    background:var(--black);
+    color:var(--white);
+    font-size:1rem;
+    font-weight:600;
+    cursor:pointer;
+    overflow:hidden;
+    position:relative;
+    transition:var(--transition);
+}
+
+.whatsapp-btn::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:-120%;
+    width:100%;
+    height:100%;
+    background:linear-gradient(
+        120deg,
+        transparent,
+        rgba(255,255,255,.35),
+        transparent
+    );
+    transition:.8s;
+}
+
+.whatsapp-btn:hover::before{
+    left:120%;
+}
+
+.whatsapp-btn:hover{
+    background:var(--gold);
+    color:var(--black);
+    transform:translateY(-3px);
+}
+
+.whatsapp-btn:active{
+    transform:scale(.98);
+}
+
+/*==========================================
+        Animations
+==========================================*/
+
+.order-container{
+    animation:fadeUp .7s ease;
+}
+
+@keyframes fadeUp{
+
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+/*==========================================
+        Responsive
+==========================================*/
+
+@media(max-width:768px){
+
+    .order-container{
+        padding:30px 20px;
+    }
+
+    .order-title{
+        font-size:2rem;
+    }
+
+    .form-row{
+        grid-template-columns:1fr;
+    }
+
+    .amount-panel{
+        flex-direction:column;
+        gap:10px;
+        text-align:center;
+    }
+
+}
+
+@media(max-width:480px){
+
+    .order-section{
+        padding:30px 15px;
+    }
+
+    .order-title{
+        font-size:1.8rem;
+    }
+
+    .upload-area{
+        padding:30px 15px;
+    }
+
+    .amount-value{
+        font-size:1.6rem;
+    }
+
+    .whatsapp-btn{
+        font-size:.95rem;
+        padding:15px;
+    }
+
+}

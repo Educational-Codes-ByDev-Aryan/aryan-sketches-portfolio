@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>RN Sketches | Commission a Custom Sketch</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ==========================
+         ORDER SECTION
+    =========================== -->
+
+    <section class="order-section">
+
+        <div class="order-container">
+
+            <!-- Heading -->
+
+            <div class="section-heading">
+
+                <span class="heading-tag">
+                    RN Sketches
+                </span>
+
+                <h1 class="order-title">
+                    Commission a Custom Sketch
+                </h1>
+
+                <p class="order-subtitle">
+                    Turn your favourite memories into beautiful handmade sketches.
+                    Fill in the details below and place your order through WhatsApp.
+                </p>
+
+            </div>
+
+            <!-- Order Form -->
+
+            <form id="sketchOrderForm">
+
+                <!-- Name & Phone -->
+
+                <div class="form-row">
+
+                    <div class="form-group">
+
+                        <label for="clientName">
+                            Full Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="clientName"
+                            placeholder="Enter your full name"
+                            required>
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label for="clientPhone">
+                            WhatsApp Number
+                        </label>
+
+                        <input
+                            type="tel"
+                            id="clientPhone"
+                            placeholder="+91 XXXXX XXXXX"
+                            required>
+
+                    </div>
+
+                </div>
+
+                <!-- Email -->
+
+                <div class="form-group">
+
+                    <label for="clientEmail">
+                        Email (Optional)
+                    </label>
+
+                    <input
+                        type="email"
+                        id="clientEmail"
+                        placeholder="example@gmail.com">
+
+                </div>
+
+                <!-- Upload -->
+
+                <div class="form-group">
+
+                    <label>
+                        Upload Reference Photo
+                    </label>
+
+                    <div class="upload-area" id="uploadZone">
+
+                        <div class="upload-icon">
+
+                            📷
+
+                        </div>
+
+                        <h3>
+                            Upload Your Photo
+                        </h3>
+
+                        <p id="fileLabel">
+                            Drag & Drop or Click to Upload
+                        </p>
+
+                        <input
+                            type="file"
+                            id="photoInput"
+                            accept="image/*"
+                            required>
+
+                    </div>
+
+                </div>
+
+                <!-- Sketch Size -->
+
+                <div class="form-group">
+
+                    <label for="sketchSize">
+                        Sketch Size
+                    </label>
+
+                    <select id="sketchSize">
+
+                        <option value="A4" data-price="1200">
+                            A4 Size - ₹1200
+                        </option>
+
+                        <option value="A3" data-price="2500">
+                            A3 Size - ₹2500
+                        </option>
+
+                        <option value="A2" data-price="4500">
+                            A2 Size - ₹4500
+                        </option>
+
+                    </select>
+
+                </div>
+
+                <!-- Frame -->
+
+                <div class="form-group">
+
+                    <label for="frameType">
+                        Frame Type
+                    </label>
+
+                    <select id="frameType">
+
+                        <option value="No Frame">
+                            Without Frame
+                        </option>
+
+                        <option value="Black Frame">
+                            Black Frame
+                        </option>
+
+                        <option value="Golden Frame">
+                            Golden Frame
+                        </option>
+
+                    </select>
+
+                </div>
+
+                <!-- Address -->
+
+                <div class="form-group">
+
+                    <label for="address">
+                        Delivery Address
+                    </label>
+
+                    <textarea
+                        id="address"
+                        rows="4"
+                        placeholder="Enter complete address"></textarea>
+
+                </div>
+
+                <!-- Instructions -->
+
+                <div class="form-group">
+
+                    <label for="notes">
+                        Special Instructions
+                    </label>
+
+                    <textarea
+                        id="notes"
+                        rows="4"
+                        placeholder="Write any special request..."></textarea>
+
+                </div>
+
+                <!-- Amount -->
+
+                <div class="amount-panel">
+
+                    <div>
+
+                        <span class="amount-label">
+
+                            Total Amount
+
+                        </span>
+
+                    </div>
+
+                    <div>
+
+                        <span
+                            class="amount-value"
+                            id="priceDisplay">
+
+                            ₹1200
+
+                        </span>
+
+                    </div>
+
+                </div>
+
+                <!-- Button -->
+
+                <button
+                    class="whatsapp-btn"
+                    type="submit">
+
+                    <span>
+
+                        Place Order on WhatsApp
+
+                    </span>
+
+                </button>
+
+            </form>
+
+        </div>
+
+    </section>
+
+    <!-- JavaScript -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
