@@ -171,7 +171,7 @@ ${notes || "None"}
 💰 Amount:
 ${amount}
 
-Please send image directly below this message in document format ! Thank you.`;
+Please send image which you want to directly below this message in document format ! Thank you.`;
 
 
 
