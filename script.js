@@ -1,2 +1,4 @@
-alert("Welcome to Aryan's web");
-alert("The Contact section is temporarily unavailable. Please use the 'Order a Sketch' button to place your order.");
+
+function contactAlert() {
+    alert("The Contact section is currently under maintenance. Please click 'Order a Sketch' to get in touch and place your order.");
+}
